@@ -41,7 +41,14 @@ const ExerciseCard = ({
         },
       }}
     >
-      <div sx={{ backgroundColor: "white", borderRadius: "5px", padding: 3 }}>
+      <div
+        sx={{
+          backgroundColor: "white",
+          borderRadius: "5px",
+          margin: 2,
+          padding: 3,
+        }}
+      >
         <a href={link} target="_blank" rel="noreferrer noopener">
           <img src={image} width="100%" />
         </a>

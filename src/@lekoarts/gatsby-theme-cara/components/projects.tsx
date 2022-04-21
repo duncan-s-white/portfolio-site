@@ -37,6 +37,7 @@ const Projects = ({
             gridTemplateColumns: [`1fr`, `1fr`, `1fr`, `repeat(2, 1fr)`],
             h2: { gridColumn: `-1/1`, color: `white !important` },
           }}
+          id="projects"
         >
           <ProjectsMDX />
         </div>

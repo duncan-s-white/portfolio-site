@@ -17,6 +17,7 @@ module.exports = {
     author: `@lekoarts_de`,
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
     `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
