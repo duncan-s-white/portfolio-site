@@ -107,8 +107,14 @@ const Tech = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         <div
           sx={{
             display: `grid`,
-            gridGap: [2],
-            gridTemplateColumns: [`repeat(8, 1fr)`],
+            gridGap: [3, 4],
+            gridTemplateColumns: [
+              `repeat(2, 1fr)`,
+              `repeat(2, 1fr)`,
+              `repeat(3, 1fr)`,
+              `repeat(4, 1fr)`,
+              `repeat(6, 1fr)`,
+            ],
             h2: { gridColumn: `-1/1` },
           }}
         >

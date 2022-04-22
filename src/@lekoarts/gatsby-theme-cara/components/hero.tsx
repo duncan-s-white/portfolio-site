@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import scrollTo from "gatsby-plugin-smoothscroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
@@ -14,7 +13,15 @@ import {
 // @ts-ignore
 import Intro from "@lekoarts/gatsby-theme-cara/src/sections/intro";
 
-const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
+const Hero = ({
+  offset,
+  factor = 1,
+  scroll,
+}: {
+  offset: number;
+  factor?: number;
+  scroll: () => void;
+}) => (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
@@ -44,7 +51,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
           width={16}
           color="icon_blue"
           left="80%"
-          top="10%"
+          top="15%"
         />
         <Svg
           icon="triangle"
@@ -157,16 +164,10 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <Inner>
         <Intro />
         <p>
-          <a sx={{ cursor: "pointer" }} onClick={() => scrollTo("#projects")}>
+          <a sx={{ cursor: "pointer" }} onClick={scroll}>
             View Projects <FontAwesomeIcon icon={faCircleArrowDown} />
           </a>
         </p>
-
-        {/* <p onClick={() => document.getElementById("projects").scrollIntoView()}>
-          Projects
-        </p> */}
-        {/* <a href="/#projects">Projects</a> */}
-        {/* <Link to="/#projects">Projects</Link> */}
       </Inner>
     </Content>
   </div>

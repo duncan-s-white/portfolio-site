@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Parallax } from "@react-spring/parallax";
+import React, { useState, useEffect, useRef } from "react";
+import { Parallax, IParallax } from "@react-spring/parallax";
 import { window, exists } from "browser-monads";
 
 import Layout from "@lekoarts/gatsby-theme-cara/src/components/layout";
-import Hero from "@lekoarts/gatsby-theme-cara/src/components/hero";
-import Projects from "@lekoarts/gatsby-theme-cara/src/components/projects";
+import Hero from "../components/hero";
+import Links from "../components/links";
+import Projects from "../components/projects";
 import About from "@lekoarts/gatsby-theme-cara/src/components/about";
 import Tech from "../components/tech";
 import Contact from "@lekoarts/gatsby-theme-cara/src/components/contact";
@@ -29,10 +30,18 @@ const Cara = () => {
     contactFactor,
   } = useWindowWidth(); // Our custom Hook
 
+  const parallax = useRef<IParallax>(null);
+
+  const scroll = (to: number) => {
+    if (parallax.current) {
+      parallax.current.scrollTo(to);
+    }
+  };
   return (
     <Layout>
-      <Parallax pages={pages}>
-        <Hero offset={0} factor={1} />
+      <Parallax ref={parallax} pages={pages}>
+        <Links />
+        <Hero offset={0} factor={1} scroll={() => scroll(1.75)} />
         <Projects offset={projectsOffset} factor={projectsFactor} />
         <About offset={aboutOffset} factor={aboutFactor} />
         <Tech offset={techOffset} factor={techFactor} />
@@ -47,10 +56,10 @@ function useWindowWidth() {
 
   let breakpoints = {
     pages: 7,
-    projectsOffset: 1.5,
+    projectsOffset: 1.6,
     projectsFactor: 3,
-    techOffset: 4,
-    techFactor: 1,
+    techOffset: 4.4,
+    techFactor: 0.6,
     aboutOffset: 5,
     aboutFactor: 1,
     contactOffset: 6,
