@@ -140,7 +140,13 @@ const Tech = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
       </Divider>
       <Content speed={0.4} offset={offset} factor={factor}>
         <Inner>
-          <h2>Technologies</h2>
+          <h2
+            sx={{
+              fontSize: [4, 5, 6],
+            }}
+          >
+            Technologies
+          </h2>
           <div className="tech-glide">
             <div
               className="glide__track"

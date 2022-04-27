@@ -78,28 +78,31 @@ function useWindowWidth() {
     });
 
     switch (true) {
-      case width <= 400:
-        breakpoints.pages = 8.15;
+      // case width <= 400:
+      //   breakpoints.pages = 8.15;
 
-        breakpoints.projectsOffset = 2.2;
-        breakpoints.projectsFactor = 4;
+      //   breakpoints.projectsOffset = 2.2;
+      //   breakpoints.projectsFactor = 4;
 
-        breakpoints.aboutOffset = 6.2;
-        breakpoints.aboutFactor = 1;
+      //   breakpoints.aboutOffset = 6.2;
+      //   breakpoints.aboutFactor = 1;
 
-        breakpoints.contactOffset = 7.2;
-        breakpoints.contactFactor = 1;
-        break;
+      //   breakpoints.contactOffset = 7.2;
+      //   breakpoints.contactFactor = 1;
+      //   break;
       case width <= 600:
-        breakpoints.pages = 10.2;
+        breakpoints.pages = 7;
 
-        breakpoints.projectsOffset = 3.2;
-        breakpoints.projectsFactor = 5.6;
+        breakpoints.projectsOffset = 1.8;
+        breakpoints.projectsFactor = 2.4;
 
-        breakpoints.aboutOffset = 8.4;
+        breakpoints.techOffset = 4;
+        breakpoints.techFactor = 0.6;
+
+        breakpoints.aboutOffset = 5;
         breakpoints.aboutFactor = 1;
 
-        breakpoints.contactOffset = 9.4;
+        breakpoints.contactOffset = 6;
         breakpoints.contactFactor = 1;
         break;
       case width <= 900:

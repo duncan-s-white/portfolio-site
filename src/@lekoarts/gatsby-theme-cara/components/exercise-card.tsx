@@ -41,65 +41,65 @@ const ExerciseCard = ({
         },
       }}
     >
-      <div
-        sx={{
-          backgroundColor: "white",
-          borderRadius: "5px",
-          padding: 3,
-          width: "100%",
-          maxWidth: `150px`,
-          m: `0 auto`,
-        }}
-      >
-        <a href={link} target="_blank" rel="noreferrer noopener">
-          <img src={image} sx={{ maxWidth: `100px` }} />
-        </a>
-      </div>
-      <div
-        sx={{
-          textAlign: `left`,
-          textTransform: `uppercase`,
-          letterSpacing: `wide`,
-          p: "1.5rem 0 1.3rem",
-          fontSize: [2, `1.2em`],
-          fontWeight: `medium`,
-          lineHeight: 1,
-        }}
-      >
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer noopener"
+      <div sx={{ display: `flex`, flexDirection: [`column`, `row`, `column`] }}>
+        <div
           sx={{
-            color: "white",
-            "&:hover": {
-              color: "textMuted",
-            },
+            backgroundColor: "white",
+            borderRadius: "5px",
+            padding: 3,
+            width: "100%",
+            maxWidth: `150px`,
+            m: `0 auto`,
           }}
         >
-          {title}
-        </a>
-      </div>
-      <div
-        sx={{
-          textAlign: `left`,
-        }}
-      >
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer noopener"
-          sx={{
-            color: "white",
-            "&:hover": {
-              color: "textMuted",
-            },
-          }}
-        >
-          <FontAwesomeIcon icon={faServer} /> Hosted Exercise
-        </a>
-        {repoLink ? (
-          <>
+          <a href={link} target="_blank" rel="noreferrer noopener">
+            <img src={image} sx={{ maxWidth: `100px` }} />
+          </a>
+        </div>
+        <div>
+          <div
+            sx={{
+              textAlign: `left`,
+              textTransform: `uppercase`,
+              letterSpacing: `wide`,
+              p: "1.5rem 0 1.3rem",
+              fontSize: [2, `1.2em`],
+              fontWeight: `medium`,
+              lineHeight: 1,
+            }}
+          >
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer noopener"
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "textMuted",
+                },
+              }}
+            >
+              {title}
+            </a>
+          </div>
+          <div
+            sx={{
+              textAlign: `left`,
+            }}
+          >
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer noopener"
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "textMuted",
+                },
+              }}
+            >
+              <FontAwesomeIcon icon={faServer} /> Hosted Exercise
+            </a>
             <br />
             <a
               href={repoLink}
@@ -114,10 +114,8 @@ const ExerciseCard = ({
             >
               <FontAwesomeIcon icon={faGithub} /> ReadMe & Code
             </a>
-          </>
-        ) : (
-          ""
-        )}
+          </div>
+        </div>
       </div>
     </div>
   );
