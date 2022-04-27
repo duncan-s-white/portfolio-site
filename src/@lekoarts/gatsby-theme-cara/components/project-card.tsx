@@ -24,8 +24,9 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
+      className="glide__slide"
       sx={{
-        width: `100%`,
+        height: `auto`,
         boxShadow: `lg`,
         position: `relative`,
         textDecoration: `none`,
@@ -42,9 +43,12 @@ const ProjectCard = ({
         },
       }}
     >
-      <div>
+      <div sx={{ textAlign: `center` }}>
         <a href={link} target="_blank" rel="noreferrer noopener">
-          <img src={image} width="100%" />
+          <img
+            src={image}
+            sx={{ width: `100%`, maxWidth: `400px`, margin: `0 auto` }}
+          />
         </a>
       </div>
 
@@ -114,6 +118,10 @@ const ProjectCard = ({
           opacity: 0.85,
           textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
           fontSize: "15px",
+          "& ul": {
+            listStyleType: "circle",
+            padding: `0 20px`,
+          },
         }}
       >
         {children}

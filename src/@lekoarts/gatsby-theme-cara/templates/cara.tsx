@@ -41,7 +41,7 @@ const Cara = () => {
     <Layout>
       <Parallax ref={parallax} pages={pages}>
         <Links />
-        <Hero offset={0} factor={1} scroll={() => scroll(1.75)} />
+        <Hero offset={0} factor={1} scroll={() => scroll(1.6)} />
         <Projects offset={projectsOffset} factor={projectsFactor} />
         <About offset={aboutOffset} factor={aboutFactor} />
         <Tech offset={techOffset} factor={techFactor} />
@@ -55,14 +55,14 @@ function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
 
   let breakpoints = {
-    pages: 7,
-    projectsOffset: 1.6,
-    projectsFactor: 3,
-    techOffset: 4.4,
-    techFactor: 0.6,
-    aboutOffset: 5,
+    pages: 6,
+    projectsOffset: 1.4,
+    projectsFactor: 2,
+    techOffset: 3.6,
+    techFactor: 0.4,
+    aboutOffset: 4,
     aboutFactor: 1,
-    contactOffset: 6,
+    contactOffset: 5,
     contactFactor: 1,
     width: width,
   };

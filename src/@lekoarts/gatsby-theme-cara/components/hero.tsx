@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faCircleDown } from "@fortawesome/free-regular-svg-icons";
 import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider";
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner";
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content";
@@ -164,8 +164,8 @@ const Hero = ({
       <Inner>
         <Intro />
         <p>
-          <a sx={{ cursor: "pointer" }} onClick={scroll}>
-            View Projects <FontAwesomeIcon icon={faCircleArrowDown} />
+          <a sx={{ cursor: "pointer", fontSize: 4 }} onClick={scroll}>
+            View Projects <FontAwesomeIcon icon={faCircleDown} />
           </a>
         </p>
       </Inner>

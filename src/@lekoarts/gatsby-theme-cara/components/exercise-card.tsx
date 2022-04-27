@@ -9,7 +9,6 @@ type ExerciseCardProps = {
   link: string;
   repoLink: string;
   title: string;
-  children: React.ReactNode;
   bg: string;
   image: string;
 };
@@ -18,19 +17,20 @@ const ExerciseCard = ({
   link,
   repoLink,
   title,
-  children,
   bg,
   image,
 }: ExerciseCardProps) => {
   return (
     <div
       sx={{
+        textAlign: `center`,
         width: `100%`,
         boxShadow: `lg`,
         position: `relative`,
         textDecoration: `none`,
         borderRadius: `lg`,
-        p: ["1.5em", "2em"],
+        px: [3, 3, 3, 3],
+        py: 4,
         color: `white`,
         background: bg || `none`,
         transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
@@ -45,20 +45,23 @@ const ExerciseCard = ({
         sx={{
           backgroundColor: "white",
           borderRadius: "5px",
-          margin: 2,
           padding: 3,
+          width: "100%",
+          maxWidth: `150px`,
+          m: `0 auto`,
         }}
       >
         <a href={link} target="_blank" rel="noreferrer noopener">
-          <img src={image} width="100%" />
+          <img src={image} sx={{ maxWidth: `100px` }} />
         </a>
       </div>
       <div
         sx={{
+          textAlign: `left`,
           textTransform: `uppercase`,
           letterSpacing: `wide`,
-          py: 3,
-          fontSize: [2, 3],
+          p: "1.5rem 0 1.3rem",
+          fontSize: [2, `1.2em`],
           fontWeight: `medium`,
           lineHeight: 1,
         }}
@@ -77,7 +80,11 @@ const ExerciseCard = ({
           {title}
         </a>
       </div>
-      <div>
+      <div
+        sx={{
+          textAlign: `left`,
+        }}
+      >
         <a
           href={link}
           target="_blank"
@@ -111,16 +118,6 @@ const ExerciseCard = ({
         ) : (
           ""
         )}
-      </div>
-      <div
-        sx={{
-          pt: 2,
-          opacity: 0.85,
-          textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
-          fontSize: "15px",
-        }}
-      >
-        {children}
       </div>
     </div>
   );
