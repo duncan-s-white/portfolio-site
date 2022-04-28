@@ -17,14 +17,16 @@ import Glide from "@glidejs/glide";
 
 const Tech = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
   useEffect(() => {
-    new Glide(".tech-glide", {
+    const glideOptionsRTL = {
       type: "carousel",
+      startAt: 1,
       autoplay: 1,
       animationDuration: 3000,
       animationTimingFunc: "linear",
       hoverpause: true,
       perView: 6,
       gap: 20,
+      direction: "rtl",
       breakpoints: {
         1200: {
           perView: 4,
@@ -39,8 +41,16 @@ const Tech = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
           perView: 1,
         },
       },
-    }).mount();
+    };
+    const glideOptionsLTR = { ...glideOptionsRTL };
+    glideOptionsLTR.startAt = 7;
+    glideOptionsLTR.direction = "ltr";
+    //@ts-ignore
+    new Glide(".tech-glide-rtl", glideOptionsRTL).mount();
+    //@ts-ignore
+    new Glide(".tech-glide-ltr", glideOptionsLTR).mount();
   }, []);
+
   return (
     <div>
       <Divider speed={0.1} offset={offset} factor={factor}>
@@ -147,7 +157,18 @@ const Tech = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
           >
             Technologies
           </h2>
-          <div className="tech-glide">
+          <div className="tech-glide-rtl">
+            <div
+              className="glide__track"
+              sx={{ padding: "1rem" }}
+              data-glide-el="track"
+            >
+              <div className="glide__slides" sx={{ overflow: "visible" }}>
+                <TechMDX />
+              </div>
+            </div>
+          </div>
+          <div className="tech-glide-ltr">
             <div
               className="glide__track"
               sx={{ padding: "1rem" }}

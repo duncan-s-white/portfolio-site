@@ -5,7 +5,7 @@ const TechCard = ({ title, image }: { title: string; image: string }) => {
   return (
     <div
       sx={{
-        backgroundColor: "background",
+        backgroundColor: "tech_background",
         boxShadow:
           "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
         position: `relative`,
@@ -26,6 +26,7 @@ const TechCard = ({ title, image }: { title: string; image: string }) => {
       </div>
       <div
         sx={{
+          color: `tech_text`,
           letterSpacing: `wide`,
           py: 3,
           fontSize: [1, 2],

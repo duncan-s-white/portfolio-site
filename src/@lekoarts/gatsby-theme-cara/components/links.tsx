@@ -10,9 +10,16 @@ import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
 export default function links() {
   return (
-    <div sx={{ position: `absolute`, right: 50, top: 20, zIndex: 100 }}>
+    <div
+      sx={{
+        position: `absolute`,
+        right: 50,
+        top: 20,
+        zIndex: 100,
+        "& a": { color: `link_text` },
+      }}
+    >
       <a
-        sx={{ color: `purple` }}
         target="_blank"
         rel="noreferrer noopener"
         href="https://github.com/duncan-s-white"
@@ -20,12 +27,11 @@ export default function links() {
         <FontAwesomeIcon icon={faGithub} /> duncan-s-white
       </a>
       <br />
-      <a sx={{ color: `purple` }} href="mailto: duncanstanleywhite@gmail.com">
+      <a href="mailto: duncanstanleywhite@gmail.com">
         <FontAwesomeIcon icon={faEnvelope} /> duncanstanleywhite@gmail.com
       </a>
       <br />
       <a
-        sx={{ color: `purple` }}
         target="_blank"
         rel="noreferrer noopener"
         href="https://www.linkedin.com/in/duncan-white-4a9171223/"
@@ -33,7 +39,7 @@ export default function links() {
         <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
       </a>
       <br />
-      <a sx={{ color: `purple` }} href="">
+      <a href="Duncan_White_CV.pdf" download>
         <FontAwesomeIcon icon={faFilePdf} /> Download my CV
       </a>
     </div>

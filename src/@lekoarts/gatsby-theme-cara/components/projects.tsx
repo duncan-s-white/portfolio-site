@@ -83,6 +83,8 @@ const Projects = ({
               <button className="glide__bullet" data-glide-dir="=1"></button>
               <button className="glide__bullet" data-glide-dir="=2"></button>
               <button className="glide__bullet" data-glide-dir="=3"></button>
+              <button className="glide__bullet" data-glide-dir="=4"></button>
+              <button className="glide__bullet" data-glide-dir="=5"></button>
             </div>
             <div className="glide__arrows" data-glide-el="controls">
               <FontAwesomeIcon

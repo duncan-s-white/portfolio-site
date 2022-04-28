@@ -22,6 +22,12 @@ const ProjectCard = ({
   bg,
   image,
 }: ProjectCardProps) => {
+  const imageElm = (
+    <img
+      src={image}
+      sx={{ width: `100%`, maxWidth: `400px`, margin: `0 auto` }}
+    />
+  );
   return (
     <div
       className="glide__slide"
@@ -44,12 +50,13 @@ const ProjectCard = ({
       }}
     >
       <div sx={{ textAlign: `center` }}>
-        <a href={link} target="_blank" rel="noreferrer noopener">
-          <img
-            src={image}
-            sx={{ width: `100%`, maxWidth: `400px`, margin: `0 auto` }}
-          />
-        </a>
+        {link || repoLink ? (
+          <a href={link || repoLink} target="_blank" rel="noreferrer noopener">
+            {imageElm}
+          </a>
+        ) : (
+          imageElm
+        )}
       </div>
 
       <div
@@ -62,34 +69,44 @@ const ProjectCard = ({
           lineHeight: 1,
         }}
       >
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer noopener"
-          sx={{
-            color: "white",
-            "&:hover": {
-              color: "textMuted",
-            },
-          }}
-        >
-          {title}
-        </a>
+        {link || repoLink ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer noopener"
+            sx={{
+              color: "white",
+              "&:hover": {
+                color: "textMuted",
+              },
+            }}
+          >
+            {title}
+          </a>
+        ) : (
+          title
+        )}
       </div>
       <div>
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer noopener"
-          sx={{
-            color: "white",
-            "&:hover": {
-              color: "textMuted",
-            },
-          }}
-        >
-          <FontAwesomeIcon icon={faServer} /> View the Hosted Project
-        </a>
+        {link ? (
+          <>
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer noopener"
+              sx={{
+                color: "white",
+                "&:hover": {
+                  color: "textMuted",
+                },
+              }}
+            >
+              <FontAwesomeIcon icon={faServer} /> View the Hosted Project
+            </a>
+          </>
+        ) : (
+          ""
+        )}
         {repoLink ? (
           <>
             <br />
