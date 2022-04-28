@@ -1,9 +1,21 @@
-import theme from "@lekoarts/gatsby-theme-cara/src/gatsby-plugin-theme-ui/index";
+import baseTheme from "@lekoarts/gatsby-theme-cara/src/gatsby-plugin-theme-ui/index";
 import { tailwind } from "@theme-ui/presets";
 
-theme.colors.tech_background = tailwind.colors.gray[2];
-theme.colors.tech_text = tailwind.colors.gray[8];
-theme.colors.link_text = tailwind.colors.purple[5];
-theme.colors.modes.light.link_text = tailwind.colors.purple[9];
+const theme = {
+  ...baseTheme,
+  colors: {
+    ...baseTheme.colors,
+    tech_background: tailwind.colors.gray[2],
+    tech_text: tailwind.colors.gray[8],
+    link_text: tailwind.colors.purple[5],
+    modes: {
+      ...baseTheme.colors.modes,
+      light: {
+        ...baseTheme.colors.modes.light,
+        link_text: tailwind.colors.purple[9],
+      },
+    },
+  },
+};
 
 export default theme;

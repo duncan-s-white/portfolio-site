@@ -18,25 +18,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,
-    `gatsby-remark-images`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          quality: 90,
-          formats: ["auto", "webp", "avif"],
-          placeholder: "blurred",
-        },
-      },
-    },
     `gatsby-transformer-sharp`,
     {
       resolve: `@lekoarts/gatsby-theme-cara`,
