@@ -30,7 +30,7 @@ const ExerciseCard = ({
         textDecoration: `none`,
         borderRadius: `lg`,
         px: [3, 3, 3, 3],
-        py: 4,
+        py: [2, 3, 4],
         color: `white`,
         background: bg || `none`,
         transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
@@ -41,19 +41,20 @@ const ExerciseCard = ({
         },
       }}
     >
-      <div sx={{ display: `flex`, flexDirection: [`column`, `row`, `column`] }}>
+      <div sx={{ display: `flex`, flexDirection: [`row`, `row`, `column`] }}>
         <div
           sx={{
+            alignSelf: [`flex-start`, `flex-start`, `center`],
+            justifySelf: [`flex-start`, `flex-start`, `center`],
             backgroundColor: "white",
             borderRadius: "5px",
-            padding: 3,
+            padding: [`10px`, `15px`, `25px`],
             width: "100%",
-            maxWidth: `150px`,
-            m: `0 auto`,
+            maxWidth: [`60px`, `90px`, `150px`],
           }}
         >
           <a href={link} target="_blank" rel="noreferrer noopener">
-            <img src={image} sx={{ maxWidth: `100px` }} />
+            <img src={image} sx={{ maxWidth: [`40px`, `60px`, `100px`] }} />
           </a>
         </div>
         <div>
@@ -62,10 +63,10 @@ const ExerciseCard = ({
               textAlign: `left`,
               textTransform: `uppercase`,
               letterSpacing: `wide`,
-              p: "1.5rem 0 1.3rem",
+              p: ["1.5rem 0 1.3rem", "0 0 0.2em 0.5em", "1.5rem 0 1.3rem"],
               fontSize: [2, `1.2em`],
               fontWeight: `medium`,
-              lineHeight: 1,
+              lineHeight: [0.8, 0.9, 1],
             }}
           >
             <a
@@ -85,6 +86,7 @@ const ExerciseCard = ({
           <div
             sx={{
               textAlign: `left`,
+              px: [2, 2, 0],
             }}
           >
             <a

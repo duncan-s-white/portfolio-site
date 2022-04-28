@@ -20,6 +20,7 @@ const Cara = () => {
   // Client-side Runtime fetch browser width
   const {
     pages,
+    projectsScroll,
     projectsOffset,
     projectsFactor,
     techOffset,
@@ -41,7 +42,7 @@ const Cara = () => {
     <Layout>
       <Parallax ref={parallax} pages={pages}>
         <Links />
-        <Hero offset={0} factor={1} scroll={() => scroll(1.6)} />
+        <Hero offset={0} factor={1} scroll={() => scroll(projectsScroll)} />
         <Projects offset={projectsOffset} factor={projectsFactor} />
         <About offset={aboutOffset} factor={aboutFactor} />
         <Tech offset={techOffset} factor={techFactor} />
@@ -56,10 +57,11 @@ function useWindowWidth() {
 
   let breakpoints = {
     pages: 6,
+    projectsScroll: 1.6,
     projectsOffset: 1.4,
     projectsFactor: 2,
-    techOffset: 3.6,
-    techFactor: 0.4,
+    techOffset: 3.4,
+    techFactor: 0.6,
     aboutOffset: 4,
     aboutFactor: 1,
     contactOffset: 5,
@@ -69,7 +71,10 @@ function useWindowWidth() {
 
   if (exists(window)) {
     useEffect(() => {
-      const handleResize = () => setWidth(window.innerWidth);
+      const handleResize = () => {
+        console.log("resizing...");
+        setWidth(window.innerWidth);
+      };
       window.addEventListener("resize", handleResize);
 
       return () => {
@@ -93,7 +98,8 @@ function useWindowWidth() {
       case width <= 600:
         breakpoints.pages = 7;
 
-        breakpoints.projectsOffset = 1.8;
+        breakpoints.projectsScroll = 1.6;
+        breakpoints.projectsOffset = 1.4;
         breakpoints.projectsFactor = 2.4;
 
         breakpoints.techOffset = 4;
@@ -124,16 +130,16 @@ function useWindowWidth() {
     }
   }
 
-  console.log(
-    "breakpoints",
-    breakpoints.pages,
-    breakpoints.projectsOffset,
-    breakpoints.projectsFactor,
-    breakpoints.aboutOffset,
-    breakpoints.aboutFactor,
-    breakpoints.contactOffset,
-    breakpoints.contactFactor
-  );
+  // console.log(
+  //   "breakpoints",
+  //   breakpoints.pages,
+  //   breakpoints.projectsOffset,
+  //   breakpoints.projectsFactor,
+  //   breakpoints.aboutOffset,
+  //   breakpoints.aboutFactor,
+  //   breakpoints.contactOffset,
+  //   breakpoints.contactFactor
+  // );
 
   return breakpoints;
 }
