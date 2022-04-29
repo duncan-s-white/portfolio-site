@@ -54,8 +54,8 @@ const Projects = ({
   }, []);
 
   const controlsTop = [`130px`, `150px`, `50px`];
-  const controlsLeft = [`15%`, `25%`, `50%`, `35%`];
-  const controlsRight = [`15%`, `25%`, `10%`, `35%`];
+  const controlsLeft = [`8%`, `8%`, `50%`, `35%`];
+  const controlsRight = [`8%`, `8%`, `10%`, `35%`];
   const bulletsLeft = [`50%`, `50%`, `70%`, `50%`];
 
   return (
