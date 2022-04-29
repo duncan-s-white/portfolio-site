@@ -53,6 +53,11 @@ const Projects = ({
     }).mount();
   }, []);
 
+  const controlsTop = [`130px`, `150px`, `50px`];
+  const controlsLeft = [`15%`, `25%`, `50%`, `35%`];
+  const controlsRight = [`15%`, `25%`, `10%`, `35%`];
+  const bulletsLeft = [`50%`, `50%`, `70%`, `50%`];
+
   return (
     <div>
       <Divider
@@ -77,7 +82,7 @@ const Projects = ({
             <div
               className="glide__bullets"
               data-glide-el="controls[nav]"
-              sx={{ top: "50px" }}
+              sx={{ left: bulletsLeft, top: controlsTop }}
             >
               <button className="glide__bullet" data-glide-dir="=0"></button>
               <button className="glide__bullet" data-glide-dir="=1"></button>
@@ -91,13 +96,13 @@ const Projects = ({
                 className="glide__arrow glide__arrow--left"
                 data-glide-dir="<"
                 icon={faAngleLeft}
-                sx={{ left: `35%`, top: "50px" }}
+                sx={{ left: controlsLeft, top: controlsTop }}
               />
               <FontAwesomeIcon
                 className="glide__arrow glide__arrow--right"
                 data-glide-dir=">"
                 icon={faAngleRight}
-                sx={{ right: `35%`, top: "50px" }}
+                sx={{ right: controlsRight, top: controlsTop }}
               />
             </div>
             <div

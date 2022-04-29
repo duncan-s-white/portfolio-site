@@ -41,6 +41,7 @@ const Hero = ({
           color="icon_red"
           left="60%"
           top="70%"
+          hiddenMobile={true}
         />
         <Svg icon="box" width={6} color="icon_darker" left="60%" top="15%" />
       </UpDown>

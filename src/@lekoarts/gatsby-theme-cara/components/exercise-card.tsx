@@ -63,7 +63,7 @@ const ExerciseCard = ({
               textAlign: `left`,
               textTransform: `uppercase`,
               letterSpacing: `wide`,
-              p: ["1.5rem 0 1.3rem", "0 0 0.2em 0.5em", "1.5rem 0 1.3rem"],
+              p: ["1.5rem 0 1.3rem", "0 0 0.2em 0.8em", "1.5rem 0 1.3rem"],
               fontSize: [2, `1.2em`],
               fontWeight: `medium`,
               lineHeight: [0.8, 0.9, 1],
@@ -86,7 +86,7 @@ const ExerciseCard = ({
           <div
             sx={{
               textAlign: `left`,
-              px: [2, 2, 0],
+              px: [2, 3, 0],
             }}
           >
             <a
