@@ -6,8 +6,6 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 
-// color: `#805ad5` dark mode link color?? (secondary)
-
 export default function links() {
   return (
     <div
@@ -29,6 +27,8 @@ export default function links() {
           "& a": {
             p: "5px 10px",
             display: `block`,
+            lineHeight: `1.8em`,
+            textAlign: `center`,
           },
           "& a:nth-of-type(-n + 2)": {
             borderBottom: "1px solid black",
@@ -39,6 +39,9 @@ export default function links() {
             borderColor: `link_text`,
           },
           "& .link_desc": { display: [`none`, `none`, `inline`] },
+          "& svg": {
+            height: `1.2em`,
+          },
         },
       }}
     >
@@ -50,10 +53,6 @@ export default function links() {
         <FontAwesomeIcon icon={faGithub} />{" "}
         <span className="link_desc">duncan-s-white</span>
       </a>
-      <a href="mailto: duncanstanleywhite@gmail.com">
-        <FontAwesomeIcon icon={faEnvelope} />{" "}
-        <span className="link_desc">duncanstanleywhite@gmail.com</span>
-      </a>
       <a
         target="_blank"
         rel="noreferrer noopener"
@@ -62,9 +61,15 @@ export default function links() {
         <FontAwesomeIcon icon={faLinkedin} />{" "}
         <span className="link_desc">LinkedIn</span>
       </a>
+      <a href="mailto: duncanstanleywhite@gmail.com">
+        <FontAwesomeIcon icon={faEnvelope} />{" "}
+        <span className="link_desc">duncanstanleywhite@gmail.com</span>
+      </a>
       <a href="Duncan_White_CV.pdf" download>
-        <FontAwesomeIcon icon={faFilePdf} />{" "}
-        <span className="link_desc">Download my CV</span>
+        <span sx={{ display: [`block`, `block`, `none`] }}> CV</span>
+        <span className="link_desc">
+          <FontAwesomeIcon icon={faFilePdf} /> Download my CV
+        </span>
       </a>
     </div>
   );

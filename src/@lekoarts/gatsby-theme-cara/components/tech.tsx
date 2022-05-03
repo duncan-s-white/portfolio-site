@@ -38,7 +38,7 @@ const Tech = ({ offset, factor = 1 }: { offset: number; factor?: number }) => {
           perView: 2,
         },
         400: {
-          perView: 1,
+          perView: 2,
         },
       },
     };

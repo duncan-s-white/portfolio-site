@@ -10,6 +10,9 @@ import About from "@lekoarts/gatsby-theme-cara/src/components/about";
 import Tech from "../components/tech";
 import Contact from "@lekoarts/gatsby-theme-cara/src/components/contact";
 
+//adapted the code here using the comments from carlosvicient to improve responsiveness
+// https://github.com/LekoArts/gatsby-themes/issues/423
+
 // breakpoints: [`400px`, `600px`, `900px`, `1200px`, `1600px`],
 // The template is not responsive and the parallax effect brokens the containers.
 // As a work around, use react hooks (useEffect) to calculate the size of the window
@@ -85,8 +88,8 @@ function useWindowWidth() {
       case width <= 400:
         breakpoints.pages = 9;
 
-        breakpoints.projectsScroll = 1.8;
-        breakpoints.projectsOffset = 1.8;
+        breakpoints.projectsScroll = 1.7;
+        breakpoints.projectsOffset = 1.75;
         breakpoints.projectsFactor = 2.4;
 
         breakpoints.techOffset = 4.4;
@@ -99,7 +102,7 @@ function useWindowWidth() {
         breakpoints.contactFactor = 1;
         break;
       case width <= 600:
-        breakpoints.pages = 7;
+        breakpoints.pages = 7.4;
 
         breakpoints.projectsScroll = 1.68;
         breakpoints.projectsOffset = 1.7;
@@ -109,40 +112,28 @@ function useWindowWidth() {
         breakpoints.techFactor = 0.6;
 
         breakpoints.aboutOffset = 5;
-        breakpoints.aboutFactor = 1;
+        breakpoints.aboutFactor = 1.5;
 
-        breakpoints.contactOffset = 6;
+        breakpoints.contactOffset = 6.5;
         breakpoints.contactFactor = 1;
         break;
       case width <= 900:
-        // breakpoints.pages = 7;
-
-        // breakpoints.projectsOffset = 1;
-        // breakpoints.projectsFactor = 4;
-
-        // breakpoints.aboutOffset = 5;
-        // breakpoints.aboutFactor = 1;
-
-        // breakpoints.contactOffset = 6;
-        // breakpoints.contactFactor = 1;
-        break;
       case width <= 1200:
-        break;
       case width > 1600:
         break;
     }
   }
 
-  console.log(
-    "breakpoints",
-    breakpoints.pages,
-    breakpoints.projectsOffset,
-    breakpoints.projectsFactor,
-    breakpoints.aboutOffset,
-    breakpoints.aboutFactor,
-    breakpoints.contactOffset,
-    breakpoints.contactFactor
-  );
+  // console.log(
+  //   "breakpoints",
+  //   breakpoints.pages,
+  //   breakpoints.projectsOffset,
+  //   breakpoints.projectsFactor,
+  //   breakpoints.aboutOffset,
+  //   breakpoints.aboutFactor,
+  //   breakpoints.contactOffset,
+  //   breakpoints.contactFactor
+  // );
 
   return breakpoints;
 }

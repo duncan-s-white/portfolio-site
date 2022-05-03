@@ -91,6 +91,7 @@ const Hero = ({
           color="icon_darkest"
           left="75%"
           top="10%"
+          hiddenMobile
         />
         <Svg
           icon="upDown"
@@ -110,7 +111,14 @@ const Hero = ({
         top="70%"
       />
       <Svg icon="circle" width={6} color="icon_darkest" left="4%" top="20%" />
-      <Svg icon="circle" width={12} color="icon_darkest" left="50%" top="60%" />
+      <Svg
+        icon="circle"
+        hiddenMobile
+        width={12}
+        color="icon_darkest"
+        left="50%"
+        top="60%"
+      />
       <Svg icon="upDown" width={8} color="icon_darkest" left="95%" top="90%" />
       <Svg
         icon="upDown"

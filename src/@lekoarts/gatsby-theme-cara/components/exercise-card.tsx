@@ -44,6 +44,7 @@ const ExerciseCard = ({
       <div sx={{ display: `flex`, flexDirection: [`row`, `row`, `column`] }}>
         <div
           sx={{
+            display: [`none`, `block`],
             alignSelf: [`flex-start`, `flex-start`, `center`],
             justifySelf: [`flex-start`, `flex-start`, `center`],
             backgroundColor: "white",
@@ -63,10 +64,10 @@ const ExerciseCard = ({
               textAlign: `left`,
               textTransform: `uppercase`,
               letterSpacing: `wide`,
-              p: ["1.5rem 0 1.3rem", "0 0 0.2em 0.8em", "1.5rem 0 1.3rem"],
+              p: ["0.5rem 0", "0 0 0.2em 0.8em", "1.5rem 0 1.3rem"],
               fontSize: [2, `1.2em`],
               fontWeight: `medium`,
-              lineHeight: [0.8, 0.9, 1],
+              lineHeight: [1],
             }}
           >
             <a
