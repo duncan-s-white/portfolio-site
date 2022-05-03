@@ -72,7 +72,6 @@ function useWindowWidth() {
   if (exists(window)) {
     useEffect(() => {
       const handleResize = () => {
-        console.log("resizing...");
         setWidth(window.innerWidth);
       };
       window.addEventListener("resize", handleResize);
@@ -80,21 +79,25 @@ function useWindowWidth() {
       return () => {
         window.removeEventListener("resize", handleResize);
       };
-    });
+    }, []);
 
     switch (true) {
-      // case width <= 400:
-      //   breakpoints.pages = 8.15;
+      case width <= 400:
+        breakpoints.pages = 9;
 
-      //   breakpoints.projectsOffset = 2.2;
-      //   breakpoints.projectsFactor = 4;
+        breakpoints.projectsScroll = 1.8;
+        breakpoints.projectsOffset = 1.8;
+        breakpoints.projectsFactor = 2.4;
 
-      //   breakpoints.aboutOffset = 6.2;
-      //   breakpoints.aboutFactor = 1;
+        breakpoints.techOffset = 4.4;
+        breakpoints.techFactor = 0.6;
 
-      //   breakpoints.contactOffset = 7.2;
-      //   breakpoints.contactFactor = 1;
-      //   break;
+        breakpoints.aboutOffset = 5;
+        breakpoints.aboutFactor = 1;
+
+        breakpoints.contactOffset = 6;
+        breakpoints.contactFactor = 1;
+        break;
       case width <= 600:
         breakpoints.pages = 7;
 
@@ -130,16 +133,16 @@ function useWindowWidth() {
     }
   }
 
-  // console.log(
-  //   "breakpoints",
-  //   breakpoints.pages,
-  //   breakpoints.projectsOffset,
-  //   breakpoints.projectsFactor,
-  //   breakpoints.aboutOffset,
-  //   breakpoints.aboutFactor,
-  //   breakpoints.contactOffset,
-  //   breakpoints.contactFactor
-  // );
+  console.log(
+    "breakpoints",
+    breakpoints.pages,
+    breakpoints.projectsOffset,
+    breakpoints.projectsFactor,
+    breakpoints.aboutOffset,
+    breakpoints.aboutFactor,
+    breakpoints.contactOffset,
+    breakpoints.contactFactor
+  );
 
   return breakpoints;
 }

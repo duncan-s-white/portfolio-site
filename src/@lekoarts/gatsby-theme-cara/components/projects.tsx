@@ -120,7 +120,7 @@ const Projects = ({
         <Inner>
           <div
             sx={{
-              pt: "2em",
+              pt: [0, 4],
               display: `grid`,
               gridGap: ["20px", "20px", "20px", "20px", "40px"],
               gridTemplateColumns: [
