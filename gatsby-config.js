@@ -13,7 +13,7 @@ module.exports = {
     siteUrl: `https://cara.lekoarts.de`,
     siteDescription: `Duncan White portfolio website, using the cara starter theme for gatsby`,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
+    siteImage: `/banner_new.jpg`,
     author: `@lekoarts_de`,
   },
   plugins: [
