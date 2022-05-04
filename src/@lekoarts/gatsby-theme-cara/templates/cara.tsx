@@ -60,8 +60,8 @@ function useWindowWidth() {
 
   let breakpoints = {
     pages: 6,
-    projectsScroll: 1.6,
-    projectsOffset: 1.5,
+    projectsScroll: 1.75,
+    projectsOffset: 1.6,
     projectsFactor: 2,
     techOffset: 3.4,
     techFactor: 0.6,
@@ -86,19 +86,19 @@ function useWindowWidth() {
 
     switch (true) {
       case width <= 400:
-        breakpoints.pages = 9;
+        breakpoints.pages = 8;
 
-        breakpoints.projectsScroll = 1.7;
-        breakpoints.projectsOffset = 1.75;
+        breakpoints.projectsScroll = 1.8;
+        breakpoints.projectsOffset = 1.85;
         breakpoints.projectsFactor = 2.4;
 
         breakpoints.techOffset = 4.4;
-        breakpoints.techFactor = 0.6;
+        breakpoints.techFactor = 1;
 
-        breakpoints.aboutOffset = 5;
-        breakpoints.aboutFactor = 1;
+        breakpoints.aboutOffset = 5.5;
+        breakpoints.aboutFactor = 1.5;
 
-        breakpoints.contactOffset = 6;
+        breakpoints.contactOffset = 7;
         breakpoints.contactFactor = 1;
         break;
       case width <= 600:

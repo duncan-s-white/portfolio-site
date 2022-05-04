@@ -19,7 +19,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import Glide from "@glidejs/glide";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Projects = ({
   offset,
@@ -28,8 +28,9 @@ const Projects = ({
   offset: number;
   factor?: number;
 }) => {
+  const glide = useRef(null);
   useEffect(() => {
-    new Glide(".glide", {
+    glide.current = new Glide(".glide", {
       type: "carousel",
       perView: 2,
       gap: 40,
@@ -91,16 +92,23 @@ const Projects = ({
               <button className="glide__bullet" data-glide-dir="=4"></button>
               <button className="glide__bullet" data-glide-dir="=5"></button>
             </div>
-            <div className="glide__arrows" data-glide-el="controls">
+            <div className="glide__arrows">
               <FontAwesomeIcon
                 className="glide__arrow glide__arrow--left"
                 data-glide-dir="<"
+                onClick={() => {
+                  console.log("clicked left", glide);
+                  if (glide) glide.current.go("<");
+                }}
                 icon={faAngleLeft}
                 sx={{ left: controlsLeft, top: controlsTop }}
               />
               <FontAwesomeIcon
                 className="glide__arrow glide__arrow--right"
                 data-glide-dir=">"
+                onClick={() => {
+                  if (glide) glide.current.go(">");
+                }}
                 icon={faAngleRight}
                 sx={{ right: controlsRight, top: controlsTop }}
               />
