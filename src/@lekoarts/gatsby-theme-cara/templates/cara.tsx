@@ -88,8 +88,8 @@ function useWindowWidth() {
       case width <= 400:
         breakpoints.pages = 8;
 
-        breakpoints.projectsScroll = 1.8;
-        breakpoints.projectsOffset = 1.85;
+        breakpoints.projectsScroll = 1.75;
+        breakpoints.projectsOffset = 1.8;
         breakpoints.projectsFactor = 2.4;
 
         breakpoints.techOffset = 4.4;
