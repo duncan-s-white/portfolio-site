@@ -10,11 +10,11 @@ module.exports = {
     siteTitle: `Duncan White`,
     siteTitleAlt: `Duncan White - Web developer, Nottingham`,
     siteHeadline: `Duncan White - Web developer, Nottingham`,
-    siteUrl: `https://cara.lekoarts.de`,
+    siteUrl: `https://duncanwhite.co.uk`,
     siteDescription: `Duncan White portfolio website, using the cara starter theme for gatsby`,
     siteLanguage: `en`,
     siteImage: `/banner_new.jpg`,
-    author: `@lekoarts_de`,
+    author: `Duncan White`,
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,

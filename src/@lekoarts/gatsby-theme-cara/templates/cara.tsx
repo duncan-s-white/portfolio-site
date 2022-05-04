@@ -61,7 +61,7 @@ function useWindowWidth() {
   let breakpoints = {
     pages: 6,
     projectsScroll: 1.6,
-    projectsOffset: 1.4,
+    projectsOffset: 1.5,
     projectsFactor: 2,
     techOffset: 3.4,
     techFactor: 0.6,
@@ -82,7 +82,7 @@ function useWindowWidth() {
       return () => {
         window.removeEventListener("resize", handleResize);
       };
-    }, []);
+    });
 
     switch (true) {
       case width <= 400:
