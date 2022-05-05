@@ -60,8 +60,8 @@ function useWindowWidth() {
 
   let breakpoints = {
     pages: 6,
-    projectsScroll: 1.75,
-    projectsOffset: 1.6,
+    projectsScroll: 1.8,
+    projectsOffset: 1.65,
     projectsFactor: 2,
     techOffset: 3.4,
     techFactor: 0.6,
@@ -90,13 +90,13 @@ function useWindowWidth() {
 
         breakpoints.projectsScroll = 1.7;
         breakpoints.projectsOffset = 1.75;
-        breakpoints.projectsFactor = 2.4;
+        breakpoints.projectsFactor = 3;
 
         breakpoints.techOffset = 4.4;
-        breakpoints.techFactor = 1;
+        breakpoints.techFactor = 1.4;
 
         breakpoints.aboutOffset = 5.5;
-        breakpoints.aboutFactor = 1.5;
+        breakpoints.aboutFactor = 2;
 
         breakpoints.contactOffset = 7;
         breakpoints.contactFactor = 1;

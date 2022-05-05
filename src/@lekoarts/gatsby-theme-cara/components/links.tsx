@@ -53,23 +53,31 @@ export default function links() {
         <FontAwesomeIcon icon={faGithub} />{" "}
         <span className="link_desc">duncan-s-white</span>
       </a>
-      <a
+      {/* <a
         target="_blank"
         rel="noreferrer noopener"
         href="https://www.linkedin.com/in/duncan-white-4a9171223/"
       >
         <FontAwesomeIcon icon={faLinkedin} />{" "}
         <span className="link_desc">LinkedIn</span>
-      </a>
+      </a> */}
       <a href="mailto: duncanstanleywhite@gmail.com">
         <FontAwesomeIcon icon={faEnvelope} />{" "}
         <span className="link_desc">duncanstanleywhite@gmail.com</span>
       </a>
-      <a href="Duncan_White_CV.pdf" download>
-        <span sx={{ display: [`block`, `block`, `none`] }}> CV</span>
-        <span className="link_desc">
-          <FontAwesomeIcon icon={faFilePdf} /> Download my CV
-        </span>
+      <a
+        sx={{
+          "@media screen and (max-width: 600px)": {
+            gridColumnStart: 1,
+            gridColumnEnd: 3,
+          },
+        }}
+        href="Duncan_White_CV.pdf"
+        download
+      >
+        <FontAwesomeIcon icon={faFilePdf} />
+        <span sx={{ display: [`inline`, `inline`, `none`] }}> My CV</span>
+        <span className="link_desc"> Download my CV</span>
       </a>
     </div>
   );
