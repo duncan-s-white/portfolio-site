@@ -2,9 +2,9 @@
 import { jsx } from "theme-ui";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { faFileDownload } from "@fortawesome/free-solid-svg-icons";
 
 export default function links() {
   return (
@@ -75,7 +75,7 @@ export default function links() {
         href="Duncan_White_CV.pdf"
         download
       >
-        <FontAwesomeIcon icon={faFilePdf} />
+        <FontAwesomeIcon icon={faFileDownload} />
         <span sx={{ display: [`inline`, `inline`, `none`] }}> My CV</span>
         <span className="link_desc"> Download my CV</span>
       </a>
