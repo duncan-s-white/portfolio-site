@@ -72,7 +72,7 @@ const ProjectCard = ({
       >
         {link || repoLink ? (
           <a
-            href={link}
+            href={link || repoLink}
             target="_blank"
             rel="noreferrer noopener"
             sx={{
